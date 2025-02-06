@@ -24,10 +24,22 @@
   ```bash
   pip install -r requirements.txt
   ```
-3. Crea un archivo .env y agrega tu clave API de OpenAI:
+3. Crea un archivo .env y agrega las claves de API para OpenAI y Gemini:
+
+Crea el archivo .env en la raíz del proyecto con el siguiente contenido:
   ```bash
-  OPENAI_API_KEY=your_openai_api_key_here
+  OPENAI_API_KEY=tu_openai_api_key_aqui
+  GEMINI_API_KEY=tu_gemini_api_key_aqui
+  TYPE_AI=gemini  # Cambia 'gemini' por 'openai' para usar OpenAI GPT-4o-mini
   ```
+## Explicación del archivo `.env`:
+
+- **OPENAI_API_KEY**: Tu clave de API para **OpenAI**.
+- **GEMINI_API_KEY**: Tu clave de API para **Gemini**.
+- **TYPE_AI**: Define qué IA utilizar. Puedes configurarlo como:
+  - `"gemini"` para usar **Google Gemini**.
+  - `"openai"` para usar **OpenAI GPT-4o-mini**.
+
 4. Ejecuta la aplicación:
   ```bash
   streamlit run app.py
